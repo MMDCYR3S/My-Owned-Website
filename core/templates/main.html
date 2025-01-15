@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- url logo ( favicon ) -->
+  <link rel="icon" href="{% static 'pictures/favicon.ico' %}">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  
+  <!-- Extra CSS -->
+  {% block extra_css %}{% endblock extra_css %}
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/loader.css' %}" />
+  <title>My Website</title>
+</head>
+
+<body>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- ====================== Loader ==================== -->
+  <div class="loader-container">
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!--====================== navbar ===================== -->
+  <nav class="navbar navbar-expand-md bg- my-nav my-nav-shadow mb-5 mb-md-1 ">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'website:index' %}"><img src="{% static 'pictures/favicon.ico' %}" alt="" /></a>
+      <!-- منو همبرگری برای دیوایس های کوچک -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- دکمه صفحه اصلی -->
+          <li class="nav-item">
+            <a class="nav-link active my-btn-hover text-white" aria-current="page" href="{% url 'website:index' %}">صفحه
+              اصلی</a>
+          </li>
+          <!-- دکمه درباره ما -->
+          <li class="nav-item">
+            <a class="nav-link my-btn-hover text-white" href="{% url 'website:about' %}">درباره ما</a>
+          </li>
+          <!-- دکمه ارتباط با ما -->
+          <li class="nav-item">
+            <a class="nav-link my-btn-hover text-white" href="{% url 'website:contact' %}">ارتباط با ما</a>
+          </li>
+          <li class="nav-item"></li>
+        </ul>
+        <!-- باکس سرچ -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 my-bg-search" type="search" placeholder="جستجو در وبسایت..." aria-label="Search" />
+          <button class="btn btn-outline-info text" type="submit">
+            جستجو
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+
+
+    <!-- Content starts -->
+    {% block content %}
+
+    {% endblock content %}
+    <!-- Content Ends -->
+ 
+  <!-- خط جدا کننده فوتر از محتوا -->
+  <div class="container mt-5">
+    <div class="row align-items-center text-center">
+        <div class="col line"></div>
+    </div>
+  </div>
+
+  <!-- ======================= Footer ==================== -->
+  <footer class="mt-5 text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col col-md-4">
+          <!-- قسمت توضیحات -->
+          <h5 class="mb-3">MyWebsite.com</h5>
+          <p class="text-white mb-3">
+            ارتباط با رسانه‌های اجتماعی ما:
+          </p>
+          <div class="row gX">
+            <!-- تصاویر پلتفرم ها -->
+            <div class="col-2">
+              <i class="bi bi-instagram fs-1"></i>
+            </div>
+            <div class="col-2">
+              <i class="bi bi-telegram fs-1"></i>
+            </div>
+            <div class="col-2">
+              <i class="bi bi-github fs-1 "></i>
+            </div>
+            <div class="col-2">
+              <i class="bi bi-linkedin fs-1 "></i>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-8">
+          <!-- ul 1 -->
+          <div class="row">
+            <div class="col col-md-4 ">
+              <ul class="list-unstyled  ">
+                <h6 class="my-ul-h">بخش های وبسایت</h6>
+                <li><a href="{% url 'website:index' %}" class="text-white"> صفحه اصلی</a></li>
+                <li><a href="{% url 'website:about' %}" class="text-white"> تماس با ما</a></li>
+                <li><a href="{% url 'website:contact' %}" class="text-white"> ارتباط با ما</a></li>
+              </ul>
+            </div>
+          </div>
+  </footer><br>
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <!-- bootstrap javaScript -->
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script>
+          window.addEventListener('load', function () {
+              document.querySelector('.loader-container').style.display = 'none';
+              document.getElementById('content').classList.remove('hidden');
+          });
+        </script>
+</body>
+
+</html>

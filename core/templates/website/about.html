@@ -1,0 +1,193 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />  
+{% endblock extra_css %}
+    
+{% block content %}
+<body>
+    {% comment %} <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- ====================== Loader ==================== -->
+    <div class="loader-container">
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div> {% endcomment %}
+    
+    <!-- ========================= section 1 ====================== -->
+    <div class="container ">
+        <div class="row my-row align-items-center">
+            <div class="col-md col-lg mt-lg-1b fs-">
+                <!--  بخش متن -->
+                <h4 class="mb-4 mt-lg-0 fw-bold text-white">
+                    درباره ما
+                </h4>
+                <h5 class="text-primary mb-3 mb-lg-4 mt-lg-4">
+                    MyWebsite.ir
+                </h5>
+                <p class="lh-lg mb-lg-5 text-white">
+                    این وبسایت صرفاً برای ارائه انواع خدمات طراحی وبسایت
+                    ساخته شده است. شما می‌توانید با ارتباط با ما از جزئیات
+                    مربوط به طراحی انواع وبسایت ها و هزینه هرکدام از خدمات،
+                    با خبر شوید. 
+                </p>
+            </div>
+            <!-- بخش تصویر -->
+            <div class="col-md col-lg-4 mt-sm-5">
+                <img src="{% static 'pictures/entrepreneur-55.png' %}" alt="" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+    <div class="mb-4"></div>
+    <!-- end section 1 -->
+
+    <!-- ======================= section 2==================== -->
+    <div class="container">
+        <div class="row">
+            <div class="col my-card">
+                <div class="row">
+                    <div class="col">
+                        <img src="{% static 'pictures/coding-29.png' %}" class="card-image" alt="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- بخش کارت ها -->
+                    <!-- کارت اول -->
+                    <div class="col">
+                        <h1 class="text-white">اهداف ما</h1>
+                        <p class="text-white lh-lg">
+                            هدف ما، ایجاد یک وبسایت برای افرادی هست که نیازمند طراحی و ایجاد
+                            یک وبسایت تخصصی و با امنیت بالا است. ما به شما این تضمین را خواهیم داد که
+                            می‌توانید با ما به رشد و پیشرفت شغل و کار مورد نظر خود برسید.
+                        </p>
+                    </div>
+                </div>
+                <!-- پایان کارت اول -->
+            </div>
+        </div>
+    </div>
+    <!-- end section 2 -->
+
+    <!-- خط جدا کننده -->
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col line"></div>
+            <div class="col col-md-2 mx-auto">
+                <h3 class="text-white">خدمات ما</h3>
+            </div>
+            <div class="col line"></div>
+        </div>
+    </div>
+    <div class="mb-4"></div>
+
+    <!-- ====================== section 3 ==================== -->
+    <!-- چهار کارت دقیقا مثل بالا
+        کارت های بالا دو سطری و این کارت ها تک سطر هستند -->
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-5 col-md  my-card mx-auto mx-md-1">
+                <div class="row">
+                    <div class="col">
+                        <img src="{% static 'pictures/coding-29.png' %}" class="card-image" alt="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-white">ایجاد BackEnd</h1>
+                        <p class="text-white">
+                            ما با دانش گسترده در زمینه Django به شما در ایجاد
+                            یک وبسایت قدرتمند و بدون مشکل کمک خواهیم کرد.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-md my-card mx-auto mx-md-1 ">
+                <div class="row">
+                    <div class="col">
+                        <img src="{% static 'pictures/coding-29.png' %}" class="card-image" alt="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col ">
+                        <h1 class="text-white">ایجاد FrontEnd</h1>
+                        <p class="text-white">
+                            جذابیت در سادگی است. ما با استفاده از بروزترین
+                            تکنیک ها و همچنین افزونه ها این تضمین را به شما
+                            خواهیم داد که وبسایتی با سئو و همچنین طراحی زیبا
+                            برای شما آماده شود.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section 3 -->
+
+    <!-- نوار جدا کننده -->
+    <div class="container mt-5">
+        <div class="row align-items-center text-center">
+            <div class="col line"></div>
+            <div class="col col-md-2 mx-auto">
+                <h3 class="text-white">مدیران</h3>
+            </div>
+            <div class="col line"></div>
+        </div>
+    </div>
+    <div class="mb-4"></div>
+
+    <!-- ======================= section 4 ==================== -->
+    <div class="container ">
+        <div class="row">
+            <!-- مشخصات ممد-->
+            <div class="col col-md-8 my-card my-card21">
+                <div class="row align-items-center">
+                    <div class="col ms-3">
+                        <!-- بخش متنی -->
+                        <h3 class="text-white mt-2">{{m_profile.first_name}} {{m_profile.last_name}}</h3>
+                        <p class="text-white  align-text-justify">
+                            {{m_profile.description}}
+                            <br />
+                            <br />
+                            شماره تماس : -
+                        </p>
+                    </div>
+                    <div class="col-4 col-img1">
+                        <!-- تصویر کارت -->
+                        <img src="{{m_profile.image.url}}" class="card-image my-img" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- مشخصات ارشک -->
+        <div class="row" dir="ltr">
+            <div class="col col-md-8 my-card my-card21">
+                <div class="row align-items-center">
+                    <div class="col me-3">
+                        <h3 class="text-white mt-2">{{a_profile.first_name}} {{a_profile.last_name}}</h3>
+                        <p class="text-white align-text-justify">
+                            {{a_profile.description}}
+                            <br />
+                            <br />
+                            شماره تماس : -
+                        </p>
+                    </div>
+                    <div class="col-4 col-img1">
+                        <img src="{{a_profile.image.url}}" class="card-image my-img" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            
+    <!-- end section 4 -->
+{% endblock content %}
