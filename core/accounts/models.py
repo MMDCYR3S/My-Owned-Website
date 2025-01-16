@@ -5,6 +5,7 @@ from django.contrib.auth.models import (
     PermissionsMixin
 )
 
+from django.core.validators import RegexValidator
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.utils.translation import gettext_lazy as _
@@ -79,6 +80,8 @@ class Profile(models.Model):
     image = models.ImageField(upload_to="accounts/", blank=True, null=True)
     description = models.TextField()
     job = models.CharField(max_length=150)
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{11}$')
+    phone = models.CharField(validators=[phone_regex] ,max_length=11)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
     
